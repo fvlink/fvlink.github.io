@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+				<title>Record Online Player</title>
+		<meta name="google" value="notranslate">
+		<meta name="apple-itunes-app" content="app-id=396869519">
+                <meta name="google-play-app" content="app-id=ru.recordrussia.record">
+		<meta name="viewport" content="width=680">
+		
+		<meta property="og:title" content="Record Online Player" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="/" />
+		<meta property="og:image" content="img/pl_logo.jpg" />
+                <script>
+                (function(i,s,o,g,r,a,m)                                {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)                [0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-73056273-1', 'auto');
+                ga('send', 'pageview');
+
+                </script>
+		<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"http://ajax.cloudflare.com/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"c838bf59a1fd9a92e882ca7bf8deb9f0",petok:"22938dc74d3df72f498a3f8e446e656537885e51-1453997387-86400",zone:"radiorecord.ru",rocket:"0",apps:{"ga_key":{"ua":"UA-1041705-7","ga_bs":"2"},"abetterbrowser":{"ie":"7"}},sha2test:0}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="http://ajax.cloudflare.com/cdn-cgi/nexp/dok3v=38857570ac/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/jquery.jscrollpane.css" />
+		<link rel="stylesheet" href="http://www.radiorecord.ru/i/css/font-awesome/css/font-awesome.min.css">
+		
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.Storage.js"></script>
+		<script src="js/jquery.mousewheel.js"></script>
+		<script src="js/jquery.jscrollpane.min.49px.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		
+		<script src="js/date.js"></script>
+		<script src="js/waveform.js"></script>
+		
+		<script src="js/soundmanager2.js"></script>
+<style type="text/css">
+		.bigimage { width: 100%; height: 502px; float: left; overflow: hidden; background-image: url('img/station_logo_pic.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; }
+		.bigimage .imgcontent { width: 100%; height: 100%; background-position: top center; background-repeat: no-repeat; background-size: cover; }
+		</style>
+</head>
+	<body>
+<div class="content">
+		<h2 class="block-header">Record Online<span class="icon-player-block-undock"></span></h2>
+		<table class="wrapper">
+			<tr>
+				<td class="pole_content">
+					<div class="vkla radio">
+				<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="rr"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Radio Record</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/rr_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="sd90"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Супердискотека 90-х</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/sd90_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="tm"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Trancemission</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/tm_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="rus"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Russian Mix</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/rus_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="mdl"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Медляк FM</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/mdl_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="chil"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Chill-Out</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/chil_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="club"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Club</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/club_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="gop"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Гоп FM</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/gop_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="vip"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Vip Mix</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/vip_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="ps"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Pirate Station</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/ps_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="deep"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Deep</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/deep_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="brks"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Breaks</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/brks_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="dc"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Dancecore</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/dc_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="dub"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Dubstep</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/dub_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="trap"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Trap</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/trap_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="teo"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Hardstyle</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/teo_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="rock"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Rock Radio</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/rock_320</div></div>
+						<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="pump"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Pump'n'Klubb</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/pump_320</div></div>
+
+<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="fut"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Future House</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/fut_320</div></div>
+
+<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="mini"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Minimal/Tech</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/mini_320</div></div>
+
+<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="yo"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Yo! FM</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/yo_320</div></div>
+
+<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="mix"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Megamix</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/mix_320</div></div>
+
+<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="techno"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Techno</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/techno_320</div></div>
+
+<div class="station" itemscope itemtype="http://schema.org/BroadcastService" id="rave"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Record Rave</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/rave_320</div></div>
+
+						<div style="display:none;" class="station" itemscope itemtype="http://schema.org/BroadcastService" id="rock"><div class="station-img"></div><div class="station-text"><div itemprop="name" class="station-name">Rock Radio</div><div class="station-track"></div></div><div class="hidden" itemprop="url">http://air2.radiorecord.ru:805/yo_320</div></div>
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+				<div class="inner_pl">
+			<div class="bigimage">
+				<div class="imgcontent"></div>
+			</div>
+			<div class="pl_bot">
+				<div class="pl_controlls">
+					<div class="play_pause playing"></div>
+					<div class="volume">
+						<div class="vol_zapo"></div>
+						<div id="vol_razd" class="vol_razd" style="height: 25.080000000000002px;"></div>
+						<div id="vol_clickable" class="vol_clickable"></div>
+					</div>
+					<div class="bitrate">
+						<div id="l32" class="l32"></div>
+						<div id="l64" class="l64"></div>
+						<div id="l128" class="l128 active"></div>
+					</div>
+				</div>
+				
+				<div class="nowtrack_line">
+					<div class="nowtrack" id="nowtrack">
+						<div class="back" id="nowtrack_back"></div>
+						<span class="artist">Record Dance Radio</span>
+						<span class="title"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			if (!$.Storage.get('record_volume')) { $.Storage.set('record_volume', '60'); }	// проверяем наличие сохраненного уровня громкости, если нет - создаем
+			var sm_volume = parseInt($.Storage.get('record_volume'));	// заполняем глобальную переменную громкости
+			var sm_err_counter = 0;	// счетчик ошибок
+                        var streams = 'http://air2.radiorecord.ru:805';
+			var url = streams +'/rr_320';	// стандартная ссылка на поток, необходима для корректной инициализации плеера
+			soundManager.setup({	// инициализируем плеер
+				url: 'swf/',	// адрес флеш-файлов
+				flashVersion: 9,	// версия флеш
+				preferFlash: false,	// предпочитаем использовать именно флеш
+				useHighPerformance: false,	// включаем повышенный приоритет flash для улучшения whileplaying и EQ
+				onready: function() {	// после успешной инициализации плеера
+					$('.pl_controlls').children('.play_pause').removeClass('noready');	// убираем класс отсутсвия готовности у кнопки плей
+				}
+			});
+			soundManager.onerror = function() {	// если СМ2 глобально выдаст ошибку в загрузке
+				sm_err_counter++;	// считаем какая эта ошибка по счету
+				if (sm_err_counter<10) {	// если ошибка повторилась менее, чем 10 раз
+					setTimeout(function() { soundManager.reboot(); }, 10000);	// пытаемся инициализироваться заного с 10 сек тайм-аутом - хорошо работает на нестабильных коннектах
+				}
+			};
+			
+			now_pos_id = '';	// переменная для Топ100 и Хистори - содержит ID тега текущего трека
+			histogram_id = '';	// переменная для Топ100 и Хистори - содержит адрес тега для гистограммы
+			
+			function start_play(url) {	// функция запуска станции, Топ100 или Хистори. Параметр url = адрес потока или файла для проигрывания
+				stop_play();	// если мы пытаемся что-то запустить, если уже что-то играем, то надо предварительно остановить что-то прошлое
+				
+					// переинициация эквалайзера при каждом новом звучании
+				var data = [];
+				var waveform = new Waveform({
+					container: document.getElementById("nowtrack_back"),
+					interpolate: false
+				});
+				var ctx = waveform.context;
+				var gradient = ctx.createLinearGradient(0, 0, 0, waveform.height);
+				gradient.addColorStop(0.0, "#797979");
+				gradient.addColorStop(1.0, "#3e3e3e");
+				waveform.innerColor = gradient;
+					// эквалайзер иницииарован
+
+				soundObject = soundManager.createSound({	// создаем звук
+					id: 'record',	// ид стандартный
+					url: url,	// полученный адрес звука
+					autoLoad: false,	// не нужно заранее загружать поток, особенно бесконечный
+					autoPlay: true,		// включаем звучание сразу, как появится возможность
+					volume: sm_volume,	// уровень звука полученный ранее из стораджа
+					useFastPolling: true,	// включаем 10 мс таймер, взамен обычного 50 мс
+					useEQData: true,	// включаем EQ
+					onfinish: function() {	// когда трек закончится (радиопоток не заканчивается никогда)
+
+					},
+					onload: function(bSuccess) { // триггер успешной загрузки трека
+						if(!bSuccess) { restart_connection(); }	// если не загрузились, пытаемся снова
+					},
+					whileplaying: function() { // во время проигрывания
+						//console.log(this.durationEstimate - this.position);
+						waveform.update({data: soundObject.eqData.right}); // обновляем эквалайзер
+						 // увеличиваем ширину блока гистограммы (у радио нет валидного histogram_id и this.duration=Infinity
+					},
+					onid3: function() { } // возможно будущий функционал
+				});
+				$('.pl_controlls').children('.play_pause').addClass('playing');	// ну после старта звучания не грех кнопке плей сделать статус играбельной
+				$.Storage.set('play_from', 'playerindex');	// и расскажем всем вкладкам открытого сайта, что звучание пошло с playerindex. другие плееры наверное даже остановятся при обнаружении этого
+			}
+			
+			function stop_play() {	// функция остановки любого звучания - радио, топ100 или хистори
+				$('.pl_controlls').children('.play_pause').removeClass('playing');	// убираем статус играбельности у кнопки плей
+				$('.sm2_link').removeClass('playing');	// убираем статус играбельной у всех аудиоссылок
+				soundManager.destroySound('record');	// и грохаем звуковой объект с id='record'
+				$('#nowtrack_back').html('');	// убираем/очищаем эквалайзер
+				oldartist = '1';
+			}
+			
+			function restart_connection() {
+				stop_play();
+				setTimeout(start_play(url), 1000);
+			}
+		
+			$('.pl_controlls').children('.play_pause').bind('click', function() {	// вешаем событие по нажатию на кнопку плея/паузы
+				if($(this).hasClass('playing')) { stop_play(); }	// если сейчас кнопка играбельная, то останавливаем звучания
+				else { start_play(url); }	// иначе - запускаем звучание с последним url
+			});
+
+			$(function() {	// когда старница будет полностью загружена
+				$('#vol_razd').css('height', 57-sm_volume*0.57);	// нужно выставить уровень громкости на сохраненное ранее значение
+				$('#vol_clickable').slider({	// запускаем возможность таскать слайдер мышкой
+					orientation: "vertical",	// по вертикали, ага
+					range: "min",
+					min: 0,	// допустимые значения от 0
+					max: 100,	// до 100 (% в СМ2)
+					value: sm_volume,	// текущее значение давно известно, выставляем в мозг слайдеру
+					slide: function( event, ui ) {	// если пользователь слайдит громкость
+						$('#vol_razd').css('height', 57-ui.value*0.57);	// то тащим наш слайдящийся элемент по формуле
+						sm_volume=ui.value;	// применяем нашей переменной с глобальной громкостью новое значение
+						soundManager.setVolume('record',ui.value);	// и применяем для аудиообъекта новое значение громкости
+						$.Storage.set('record_volume', ui.value+'');	// записываем новую громоксть в сторадж
+					}
+				});
+				
+				function music_check() {	// функция проверки источника звучания
+					if (($.Storage.get('play_from') != 'playerindex') && ($('.pl_controlls').children('.play_pause').hasClass('playing'))) {	// если в сторадже не плеер и статус плеера играбельно
+						stop_play();	// то останавливаем звук
+					}
+				}
+				var mchk = setInterval(function() { music_check(); }, 500);	// проверяем внезапное наличие звукового потока с других мест сайта каждые полсекунды
+			});
+			
+			$('.bitrate').children('div').bind('click', function() {	// если пользователь тыкает на один из битрейтов
+				bitrate = $(this).attr('id');	// берем id нового битрейта
+/*@@@*/				//if(radio!='rr' && bitrate == 'l128') { bitrate = 'l64'; $('.bitrate').children('div').removeClass('active'); $('.l64').addClass('active'); }
+				$('.bitrate').children('div').removeClass('active');	// убираем статус активности всем битрейтам
+				$('#'+bitrate).addClass('active');	// текущему задаем активный статус
+				stop_play();	// нежно останавливаем звучание
+				
+				url = st[radio][bitrate];	// задаем новую аудиоссылку с новым битрейтом
+				start_play(url);	// запускаем звучание
+			});
+			
+			$(document).on('click', '.histogram_top', function(e) {	// клик на область смены позиции трека
+				if (e.offsetX==undefined) { xpos = e.pageX-$(this).offset().left; }	// костыль для Firefox
+				else { xpos = e.offsetX; }	// нормально для Chrome
+				soundManager.setPosition('record',soundObject.durationEstimate*xpos/323);
+			});
+			$(document).on('mousemove', '.histogram_top', function(e) {	// во время движения по кликабельной области рисуем вертикальную палку места тыка
+				if (e.offsetX==undefined) { xpos = e.pageX-$(this).offset().left; }	// костыль для Firefox
+				else { xpos = e.offsetX; }	// нормально для Chrome
+				$(this).css('backgroundPosition', xpos+'px 0px');	// задаем координаты вертикальной палки от позиции курсора
+			});
+			$(document).on('mouseleave', '.histogram_top', function(e) {	// если мышь ушла за пределы кликабельной области
+				$(this).css('backgroundPosition', '-1px 0px');	// выключаем палку
+			});
+			
+			var radiof = 'record';	// глобальная переменная с префиксом станции
+			
+			
+			var oldartist = '1';
+			
+			
+			function update_nowtrack(json) {
+				var data = JSON.parse(json);
+				if(typeof(data)!='undefined') {
+					$.each(data, function(key, val) {	// берем каждое поле из JSON-ответа
+						switch (key) {	// смотрим ключ
+							case 'ARTIST': { $('.nowtrack').children('.artist').html(val); break; }	// артисту заполняем поле артиста
+							case 'NAME': { $('.nowtrack').children('.title').html(val); break; }	// треку заполняем поле названия трека
+							case 'image600': {	// а если картинка
+								if(oldartist!=val) {	// если новая картинка отличается от прошлой
+									if(val=='false' || val=='null' || val.length<10) {
+										$('.imgcontent').animate({opacity: 0},500, function() {	// плавно меняем прозрачность в 0
+											$(this).css("background-image", "none").animate({opacity: 1}, 1000);	// меняем фон на новую картинку и плавно ее показываем
+										});
+									}
+									else {
+										$('.imgcontent').animate({opacity: 0},500, function() {	// плавно меняем прозрачность в 0
+											$(this).css("background-image", "url("+val+")").animate({opacity: 1}, 1000);	// меняем фон на новую картинку и плавно ее показываем
+										});
+									}
+									oldartist=val;	// запоминаем вставленную картинку, чтобы она не мерцала каждый раз при проверке трека
+									//console.log(val);
+								}
+								break;
+							}
+						}
+					});
+				}
+			}
+
+			function start_socket() {
+                                update_track_inline();
+				setInterval(update_track_inline, 35000);
+				
+			}
+
+			function update_track_inline() {
+				$.getJSON('https://www.radiorecord.ru/xml/'+radio+'_online_v8.txt', function(data) {
+					var items = [];
+					$.each(data, function(key, val) {	// берем каждое поле из JSON-ответа
+						switch (key) {	// смотрим ключ
+							case 'artist': { $('.nowtrack').children('.artist').html(val); break; }	// артисту заполняем поле артиста
+							case 'title': { $('.nowtrack').children('.title').html(val); break; }	// треку заполняем поле названия трека
+							case 'image600': {	// а если картинка
+								if(oldartist!=val) {	// если новая картинка отличается от прошлой
+									if(val=='false' || val=='null' || val.length<10) {
+										$('.imgcontent').animate({opacity: 0},500, function() {	// плавно меняем прозрачность в 0
+											$(this).css("background-image", "none").animate({opacity: 1}, 1000);	// меняем фон на новую картинку и плавно ее показываем
+										});
+									}
+									else {
+										$('.imgcontent').animate({opacity: 0},500, function() {	// плавно меняем прозрачность в 0
+											$(this).css("background-image", "url("+val+")").animate({opacity: 1}, 1000);	// меняем фон на новую картинку и плавно ее показываем
+										});
+									}
+									oldartist=val;	// запоминаем вставленную картинку, чтобы она не мерцала каждый раз при проверке трека
+									//console.log(val);
+								}
+								break;
+							}
+						}
+					});
+				});
+			}
+			
+			$(function() {
+				start_socket();
+			});
+			var st = Array();	// массив содержит кучу данных о каждой станции
+			st['rr']	= Array();	st['rr']['name']='record';	st['rr']['l32']	= streams+'/rr_64';			st['rr']['l64']		= streams+'/rr_128';	st['rr']['l128']	= streams+'/rr_320';
+			st['tm']	= Array();	st['tm']['name']='trancemission';	st['tm']['l32']	= streams+'/tm_64';	st['tm']['l64']		= streams+'/tm_128';	st['tm']['l128']	= streams+'/tm_320';
+			st['ps']	= Array();	st['ps']['name']='pirate';	st['ps']['l32']	= streams+'/ps_64';			st['ps']['l64']		= streams+'/ps_128';	st['ps']['l128']	= streams+'/ps_320';
+			st['vip']	= Array();	st['vip']['name']='vip';	st['vip']['l32']	= streams+'/vip_64';		st['vip']['l64']	= streams+'/vip_128';	st['vip']['l128']	= streams+'/vip_320';
+			st['teo']	= Array();	st['teo']['name']='theodor';	st['teo']['l32']	= streams+'/teo_64';	st['teo']['l64']	= streams+'/teo_128';	st['teo']['l128']	= streams+'/teo_320';
+			st['dc']	= Array();	st['dc']['name']='dancecore';	st['dc']['l32']	= streams+'/dc_64';		st['dc']['l64']		= streams+'/dc_128';	st['dc']['l128']	= streams+'/dc_320';
+			st['brks']	= Array();	st['brks']['name']='brks';	st['brks']['l32']	= streams+'/brks_64';		st['brks']['l64']	= streams+'/brks_128';	st['brks']['l128']	= streams+'/brks_320';
+			st['chil']	= Array();	st['chil']['name']='chil';	st['chil']['l32']	= streams+'/chil_64';		st['chil']['l64']	= streams+'/chil_128';	st['chil']['l128']	= streams+'/chil_320';
+			st['dub']	= Array();	st['dub']['name']='dub';	st['dub']['l32']	= streams+'/dub_64';		st['dub']['l64']	= streams+'/dub_128';	st['dub']['l128']	= streams+'/dub_320';
+			st['sd90']	= Array();	st['sd90']['name']='sd90';	st['sd90']['l32']	= streams+'/sd90_64';		st['sd90']['l64']	= streams+'/sd90_128';	st['sd90']['l128']	= streams+'/sd90_320';
+			st['club']	= Array();	st['club']['name']='club';	st['club']['l32']	= streams+'/club_64';		st['club']['l64']	= streams+'/club_128';	st['club']['l128']	= streams+'/club_320';
+			st['mdl']	= Array();	st['mdl']['name']='mdl';	st['mdl']['l32']	= streams+'/mdl_64';		st['mdl']['l64']	= streams+'/mdl_128';	st['mdl']['l128']	= streams+'/mdl_320';
+			st['gop']	= Array();	st['gop']['name']='gopfm';	st['gop']['l32']	= streams+'/gop_64';		st['gop']['l64']	= streams+'/gop_128';	st['gop']['l128']	= streams+'/gop_320';
+			st['pump']	= Array();	st['pump']['name']='pump';	st['pump']['l32']	= streams+'/pump_64';		st['pump']['l64']	= streams+'/pump_128';	st['pump']['l128']	= streams+'/pump_320';
+			st['rus']	= Array();	st['rus']['name']='rus';	st['rus']['l32']	= streams+'/rus_64';		st['rus']['l64']	= streams+'/rus_128';	st['rus']['l128']	= streams+'/rus_320';
+			st['yo']	= Array();	st['yo']['name']='yo';	st['yo']['l32']	= streams+'/yo_64';				st['yo']['l64']		= streams+'/yo_128';	st['yo']['l128']	= streams+'/yo_320';
+			st['deep']	= Array();	st['deep']['name']='deep';	st['deep']['l32']	= streams+'/deep_64';		st['deep']['l64']	= streams+'/deep_128';	st['deep']['l128']	= streams+'/deep_320';
+			st['trap']	= Array();	st['trap']['name']='trap';	st['trap']['l32']	= streams+'/trap_64';		st['trap']['l64']	= streams+'/trap_128';	st['trap']['l128']	= streams+'/trap_320';
+			st['rock']	= Array();	st['rock']['name']='rock';	st['rock']['l32']	= streams+'/rock_64';		st['rock']['l64']	= streams+'/rock_128';	st['rock']['l128']	= streams+'/rock_320';                                                    
+                        st['fut']	= Array();	st['fut']['name']='fut';	st['fut']['l32']	= streams+'/fut_64';		st['fut']['l64']	= streams+'/fut_128';	st['fut']['l128']	= streams+'/fut_320';
+                        st['mini']	= Array();	st['mini']['name']='mini';	st['mini']['l32']	= streams+'/mini_64';		st['mini']['l64']	= streams+'/mini_128';	st['mini']['l128']	= streams+'/mini_320';
+
+                        st['mix']	= Array();	st['mix']['name']='mix';	st['mix']['l32']	= streams+'/mix_64';		st['mix']['l64']	= streams+'/mix_128';	st['mix']['l128']	= streams+'/mix_320';
+                        st['techno']	= Array();	st['techno']['name']='techno';	st['techno']['l32']	= streams+'/techno_64';		st['techno']['l64']	= streams+'/techno_128';	st['techno']['l128']	= streams+'/techno_320';
+                        st['rave']	= Array();	st['rave']['name']='rave';	st['rave']['l32']	= streams+'/rave_64';		st['rave']['l64']	= streams+'/rave_128';	st['rave']['l128']	= streams+'/rave_320';
+			
+			var radio = 'rr';	// по дефолту префикс Радио Рекорд
+			var radiof = 'record';	// с полным id Радио Рекорд
+			var bitrate = 'l128';	// битрейт по-умолчанию
+                        $('.bigimage').bind('click', function() { 
+                            if($('.pl_controlls').children('.play_pause').hasClass('playing')) { stop_play(); }
+				else { start_play(url); }
+                        });
+			$('.station').bind('click', function() {	// по клику на таб станции
+				if($(this).hasClass('active')) {
+					$('.inner_pl').animate({left: "0"},550,	function() { // мягко открываем поле с детальной страницей радио и по концу анимации
+						update_track_inline();	// запускаем обновление текущего трека вне таймаута
+					});
+					$('.block-header').html('<i class="fa fa-arrow-left"></i>'+$(this).find('.station-name').html()+'<span class="icon-player-block-undock"></span>');
+				}
+				else {
+					// заполняем глобальные переменные
+					$('.station').removeClass('active');	// убираем активность всем другим табам
+					$(this).addClass('active');	// делаем текущий таб активным
+					radio = $(this).attr('id');	// заполняем глобальную переменную текущего радио
+					radiof = st[radio]['name'];	// заполняем глобальный id радио для обновлятора треков
+                                        console.log(radiof);
+					$.event.trigger({
+						type: "stationChange",
+						message: radiof,
+						time: new Date()
+					});
+					url = st[radio][bitrate];	// заполняем ссылку на поток текущего радио
+					//if(radio!='rr') { $('.l128').css('display', 'none'); }	// скрываем 320 поток если станция не рекорд
+					//else { $('.l128').css('display', 'block'); }
+					//if(radio!='rr' && bitrate == 'l128') { bitrate = 'l64'; $('.bitrate').children('div').removeClass('active'); $('.l64').addClass('active'); $('#l32').css('marginTop', '12px'); }
+					//if(radio=='rr') { $('#l32').css('marginTop', '3px'); }
+					
+					// открываем блок плеера
+					$('.imgcontent').css("background-image", "none");	// старая картинка явно не актуальна
+					$('.bigimage').css('background-image', 'url(http://club-men.ru/pl/logo/'+radio+'.jpg)');	// задаем (расово)правильный фон текущей станции
+					$('.inner_pl').animate({left: "0"},550,	function() { // мягко открываем поле с детальной страницей радио и по концу анимации
+						//update_track_inline();	// запускаем обновление текущего трека вне таймаута
+					});
+					start_play(url);	// не грех даже радио запустить
+					
+					$('.block-header').html('<i class="fa fa-arrow-left"></i>'+$(this).find('.station-name').html()+'<span class="icon-player-block-undock"></span>');
+				}
+			});
+		
+			// плагин скроллинга
+			var settings = { autoReinitialise: true, maintainPosition: false }; // массив настроек скроллера
+			var pane = $('.tab_content');	// переменная с id слоя, который надо скроллить
+			pane.jScrollPane(settings);	// запускаем плагин скроллинга к id с настройками
+			var api = pane.data('jsp');	// делаем привязку API
+				// конец плагина скроллинга
+			
+			var history_day = 'today'; // для истории показываем по-умолчанию текущий день
+			
+			$(document).on('click', '.aday', function() {	// если кликаем на какой-то день
+				history_day = $(this).attr('value');	// то выбранный день берется из value кликнутого дня
+				$.ajax({url: '//history.radiorecord.ru/index-flat.php?station='+radio+'&day='+history_day}).done(function(histordata) {	// делаем нежный ajax-Запрос
+					var pane = $('.tab_content');	// чтоб не забыть)
+					var api = pane.data('jsp');	// привязываем снова api
+					api.getContentPane().html(histordata);	// и через магию плагина обновляем содержимое блока на ответ ajax'а
+					api.reinitialise();	// ренеициализируем скроллер
+				});
+				$('.aday').removeClass('active');	// убираем всем другим дням класс активности
+				$(this).addClass('active');	// задаем текущему. на самом деле бред, но если вдруг коннект пропадет и ajax не сработает, то даты будут кликабельны :)
+			});
+			
+			$('.tab_click').bind('click', function() {	// если кликаем на таб (топ100 или хистори)
+				$('.tab_click').removeClass('active');	// убираем всем статус активности
+				$(this).addClass('active');	// задаем активным кликнутый таб
+				
+				switch ($(this).attr('id')) {	// выбираем что тыкнули
+					case 'tabtop100': {	// если топ100
+
+console.log("top100")
+
+						$.ajax({url: '//www.radiorecord.ru/xml/top100/'+radio+'.txt'}).done(function(top100data) {	// делаем аякс... все тоже самое, что и раньше
+							var pane = $('.tab_content');
+							var api = pane.data('jsp');
+							api.getContentPane().html(top100data)
+							api.reinitialise();
+						});
+						break;
+					}
+					case 'tabhistor': {	// если хистори
+						$.ajax({url: '//history.radiorecord.ru/index-flat.php?station='+radio+'&day=today'}).done(function(histordata) {	// ну и так понятно... см. выше
+							var pane = $('.tab_content');
+							var api = pane.data('jsp');
+							api.getContentPane().html(histordata);
+							api.reinitialise();
+						});
+						break;
+					}
+				}
+				
+			});
+
+// Это для треков
+
+// плагин скроллинга
+			var settings = { autoReinitialise: true, maintainPosition: false }; // массив настроек скроллера
+			var pane = $('.tab_content');	// переменная с id слоя, который надо скроллить
+			pane.jScrollPane(settings);	// запускаем плагин скроллинга к id с настройками
+			var api = pane.data('jsp');	// делаем привязку API
+				// конец плагина скроллинга
+			
+			var history_day = 'today'; // для истории показываем по-умолчанию текущий день
+			
+			$(document).on('click', '.aday', function() {	// если кликаем на какой-то день
+				history_day = $(this).attr('value');	// то выбранный день берется из value кликнутого дня
+				$.ajax({url: '//history.radiorecord.ru/index-flat.php?station='+radio+'&day='+history_day}).done(function(histordata) {	// делаем нежный ajax-Запрос
+					var pane = $('.tab_content');	// чтоб не забыть)
+					var api = pane.data('jsp');	// привязываем снова api
+					api.getContentPane().html(histordata);	// и через магию плагина обновляем содержимое блока на ответ ajax'а
+					api.reinitialise();	// ренеициализируем скроллер
+				});
+				$('.aday').removeClass('active');	// убираем всем другим дням класс активности
+				$(this).addClass('active');	// задаем текущему. на самом деле бред, но если вдруг коннект пропадет и ajax не сработает, то даты будут кликабельны :)
+			});
+			
+			$('.tab_click').bind('click', function() {	// если кликаем на таб (топ100 или хистори)
+				$('.tab_click').removeClass('active');	// убираем всем статус активности
+				$(this).addClass('active');	// задаем активным кликнутый таб
+				
+				switch ($(this).attr('id')) {	// выбираем что тыкнули
+					case 'tabtop100': {	// если топ100
+
+console.log("top100")
+
+						$.ajax({url: '//www.radiorecord.ru/xml/top100/'+radio+'.txt'}).done(function(top100data) {	// делаем аякс... все тоже самое, что и раньше
+							var pane = $('.tab_content');
+							var api = pane.data('jsp');
+							api.getContentPane().html(top100data)
+							api.reinitialise();
+						});
+						break;
+					}
+					case 'tabhistor': {	// если хистори
+						$.ajax({url: '//history.radiorecord.ru/index-flat.php?station='+radio+'&day=today'}).done(function(histordata) {	// ну и так понятно... см. выше
+							var pane = $('.tab_content');
+							var api = pane.data('jsp');
+							api.getContentPane().html(histordata);
+							api.reinitialise();
+						});
+						break;
+					}
+				}
+				
+			});
+			
+
+// Это для треков
+			
+			$('.block-header').bind('click', function() {	// заголовок у нас работает как возврат к списку радиостанций - нативно только айфонщикам. у руководство айоны, поэтому возврат вот такой...
+				$('.inner_pl').animate({left: "680"},550,function() {});	// мягко убираем детальную страницу вправо
+				$(this).html('Record Online<span class="icon-player-block-undock"></span>');
+			});
+			
+			$(document).on('click', '.sm2_link', function(e) {	// если тыкаем на аудиоссылку
+				console.log($(this));
+				e.preventDefault();
+				if($(this).hasClass('playing')) {	// если мы уже тыкали на нее до этого, то
+					stop_play();	// останавливаем звучание
+					$(this).removeClass('playing');	// убираем класс плейэбельности
+				}
+				else {	// если не тыкали до этого
+					start_play($(this).attr('href'));	// запускаем звучание ссылки
+					$('.sm2_link').removeClass('playing');	// у всех убираем статус плейнутости
+					$(this).addClass('playing');	// даем класс плейнутости текущему
+					now_pos_id = $('.tab_content').find('.playing').attr('id');	// получаем id тега аудиозаписи, проигрываемой в данный момент
+					//console.log(now_pos_id);
+					
+					if(now_pos_id.indexOf('history')==0) {	// если это история
+						$('div[hid='+now_pos_id+']').addClass('active');
+						histogram_id = $('div[hid='+now_pos_id+']').children('.histogram_back');	// то адрес гистограммы заполняем для атрибута hid
+						histogram_id_load = $('div[hid='+now_pos_id+']').children('.histogram_back_load');	// то адрес гистограммы заполняем для атрибута hid
+						$('div[hid='+now_pos_id+']').children('.histogram_top').css('display', 'block');	// включаем кликабельный слой
+					}
+					else { // иначе мы в топ1000
+						$('div[mid='+now_pos_id+']').addClass('active');
+						histogram_id = $('div[mid='+now_pos_id+']').children('.histogram_back');	// то адрес гистограммы заполняем для атрибута mid
+						histogram_id_load = $('div[mid='+now_pos_id+']').children('.histogram_back_load');	// то адрес гистограммы заполняем для атрибута mid
+						$('div[mid='+now_pos_id+']').children('.histogram_top').css('display', 'block');	// включаем кликабельный слой
+					}
+					
+					
+				}
+				return false;	// и останавливаем безудержное желание браузера проследовать по ссылке
+			});
+			
+			
+			$('body').on('keypress', function(e) {
+				if (e.charCode == 114 || e.charCode == 1082) { $('#rock').trigger('click'); }
+			});
+		
+		</script>
+<div style="position: absolute; left: -10000px; top: -10000px; width: 1px; height: 1px; overflow: hidden;">
+</div>
+</div>
+	</body>
+</html>
