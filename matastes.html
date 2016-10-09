@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Player Music and Tastes</title>
+	<script src="http://club-men.ru/.s/src/jquery-1.10.2.js"></script>
+	<style type="text/css">
+		#remoteplayer{
+			margin:-8px;
+			padding: 0;
+			background: rgba(185, 123, 47, 0.72) url(background.jpg);
+			background-size:cover;
+		}
+	</style>
+</head>
+<body>
+<script src='http://soft-men.my1.ru/js/datapl.js'></script>
+<link rel="stylesheet" type="text/css" href="http://soft-men.my1.ru/js/playercss.css">
+<div id="remoteplayer">
+	<div id="radioinfo">
+	 <a id="lastlink" ><img id="pictions" src="http://soft-men.my1.ru/js/noname.png"/></a>
+	 <div class="captionview">Заголовок: </div><span id="title"></span><br>
+	 <div class="captionview">Слушают: </div><div id="list"></div><br>
+	 <div class="captionview">Битрейт:</div><span id="bit"></span><br>
+	 <a id="link" onclick="playerplay();"></a><input id="linkvolume" type="range" min=0 max=1 step=0.005 value=0.15 onMouseMove="volume(this.value);">
+	 </div>
+ 
+ 	<audio id="player"></audio>
+</div>
+</body>
+</html>
