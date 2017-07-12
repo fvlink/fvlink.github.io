@@ -68,7 +68,7 @@ html, body {  overflow: hidden; width: 680px; position: relative; box-shadow:-35
 		.radio .station.active2 { background-color: #6b7891; background-image: url('../img/ug.png'); background-position: bottom right; background-repeat: no-repeat; }
 		.radio .station.active .station-name { color: white !important; }
 		.radio .station.active2 .station-name { color: white !important; }
-		.radio .station .station-img { width: 84px; height: 53px; background-image: url('http://club-men.ru/pl/img/sprite2.jpg'); margin: 5px; float: left; }
+		.radio .station .station-img { width: 84px; height: 53px; background-image: url('../img/sprite2.jpg'); margin: 5px; float: left; }
 		.radio .station .station-name { color: #4e4e4e; font-size: 13px; font-family: Arial; display: block; overflow: hidden; line-height: 16px; }
 		.radio .station .station-prod { color: #bec0c5; font-size: 9px; }
 		.radio .station .station-text { height: 67px; display: table-cell; vertical-align: middle; }
